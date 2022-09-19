@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
@@ -14,6 +15,7 @@ namespace CalculoNotas
 {
     public partial class Form1 : Form
     {
+
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB.;Initial Catalog=Notas;Integrated Security=True");
         SqlCommand cmd;
         
@@ -24,39 +26,39 @@ namespace CalculoNotas
 
         double nota1, nota2, nota3, nota4;
         bool testar;
-        
+        int id;
+        string nome;
+
         private void salvarNotas_Click(object sender, EventArgs e)
         {
-            if (txt_Nota1.Text != "" && txt_Nota2.Text != "" && txt_Nota3.Text != "" && txt_Nota4.Text != "" )
-            {
-                try
-                {
-                    cmd = new SqlCommand("INSERT INTO Contatos(nota1,nota2,nota3,nota4) VALUES(@Nota1,@Nota2,@Nota3,@Nota4)", con);
-                    con.Open();
-                    cmd.Parameters.AddWithValue("@nota1", txt_Nota1.Text.ToUpper());
-                    cmd.Parameters.AddWithValue("@endereco", txt_Nota2.Text.ToUpper());
-                    cmd.Parameters.AddWithValue("@celular", txt_Nota3.Text.ToUpper());
-                    cmd.Parameters.AddWithValue("@telefone", txt_Nota4.Text.ToUpper());
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro incluído com sucesso...");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro : " + ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                    limpar_Click();
 
-                }
-            }
-            else
+            try
             {
-                MessageBox.Show("Informe todos os dados requeridos");
+                cmd = new SqlCommand("INSERT INTO Alunos(id,nome,nota1,nota2,nota3,nota4) VALUES(@Id,@Nome,@Nota1,@Nota2,@Nota3,@Nota4)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@Id", txt_Id.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@Nome", txt_Nome.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@Nota1", txt_Nota1.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@Nota2", txt_Nota2.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@Nota3", txt_Nota3.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@Nota4", txt_Nota4.Text.ToUpper());
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registro incluído com sucesso...");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro : " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                
+            }
+
 
         }
+
+
 
         public void lerNotas_Click(object sender, EventArgs e)
         {
@@ -88,9 +90,9 @@ namespace CalculoNotas
 
         private void calcular_Click(object sender, EventArgs e)
         {
-            Calculo calc = new Calculo(nota1,nota2,nota3,nota4);
+            Calculo calc = new Calculo(nota1, nota2, nota3, nota4);
             double maior = calc.CalculoMaiorValor();
-            resultadoMaior.Text = string.Format("Maior nota:..........................{0}", maior.ToString("F2",CultureInfo.InvariantCulture));
+            resultadoMaior.Text = string.Format("Maior nota:..........................{0}", maior.ToString("F2", CultureInfo.InvariantCulture));
             double menor = calc.CalculoMenorValor();
             resultadoMenor.Text = string.Format("Menor nota:...........................{0}", menor.ToString("F2", CultureInfo.InvariantCulture));
             double media = calc.Media();
@@ -103,7 +105,7 @@ namespace CalculoNotas
             quantidadeMI.Text = string.Format("Qtde de notas >= a 7.............{0}", qtd.ToString("F2", CultureInfo.InvariantCulture));
         }
 
-        private void limpar_Click()
+        public void limpar_Click(object sender, EventArgs e)
         {
             resultadoMaior.Text = string.Format("Maior nota:...................{0}", 0);
             resultadoMenor.Text = string.Format("Menor nota:...................{0}", 0);
@@ -111,6 +113,11 @@ namespace CalculoNotas
             somaPar.Text = string.Format("Soma das notas pares..........{0}", 0);
             somaImpar.Text = string.Format("Soma das notas impares......{0}", 0);
             quantidadeMI.Text = string.Format("Qtde de notas >= a 7.......{0}", 0);
+            txt_Nota1 = null;
+            txt_Nota2 = null;
+            txt_Nota3 = null;
+            txt_Nota4 = null;
+
         }
 
         private void sair_Click(object sender, EventArgs e)
@@ -141,7 +148,7 @@ namespace CalculoNotas
 
         }
 
-       
+
         private void resultadoSPar_Click(object sender, EventArgs e)
         {
 

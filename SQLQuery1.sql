@@ -7,15 +7,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [Notas.Alunos](
-[nota1] [nchar](2),
-[nota2] [nchar] (2),
-[nota3] [nchar](2),
-[nota4] [nchar](2),
-[maiornota] [nchar](2),
-[menornota] [nchar](2),
-[media] [nchar](2),
-[somapar] [nchar](2),
-[somaimpar] [nchar](2),
-[maiorouigual 7] [nchar](2)
+[nota1] [double](2),
+[nota2] [double] (2),
+[nota3] [double](2),
+[nota4] [double](2)
 )
 GO
+

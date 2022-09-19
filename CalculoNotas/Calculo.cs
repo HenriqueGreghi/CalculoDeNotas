@@ -20,8 +20,7 @@ namespace CalculoNotas
         private double Nota4;
         private double soma1 = 0;
         private double soma2 = 0;
-        private double soma3 = 0;
-        private double soma4 = 0;
+       
         public Calculo(double nota1, double nota2, double nota3, double nota4)
         {
             Nota1 = nota1;
@@ -75,42 +74,42 @@ namespace CalculoNotas
 
             if (Nota1 % 2 == 0)
             {
-                soma1 = Nota1;
+                soma1 += Nota1;
             }
             if (Nota2 % 2 == 0)
             {
-                soma2 = Nota1;
+                soma1 += Nota2;
             }
             if (Nota3 % 2 == 0)
             {
-                soma3 = Nota1;
+                soma1 += Nota3;
             }
             if (Nota4 % 2 == 0)
             {
-                soma4 = Nota1;
+                soma1 += Nota4;
             }
-            SomaPar = soma1+soma2+soma3+soma4;
+            SomaPar = soma1;
             return SomaPar;
         }
         public double SomaImpar()
         {
             if (Nota1 % 2 != 0)
             {
-                soma1 = Nota1;
+                soma2 += Nota1;
             }
             if (Nota2 % 2 != 0)
             {
-                soma2 = Nota1;
+                soma2 += Nota2;
             }
             if (Nota3 % 2 != 0)
             {
-                soma3 = Nota1;
+                soma2 += Nota3;
             }
             if (Nota4 % 2 != 0)
             {
-                soma4 = Nota1;
+                soma2 += Nota4;
             }
-            SomaImp = soma1 + soma2 + soma3 + soma4;
+            SomaImp = soma2;
             return SomaImp;
         }
         public double QuantidadeNotas()
