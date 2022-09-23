@@ -6,11 +6,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [Notas.Alunos](
-[nota1] [double](2),
-[nota2] [double] (2),
-[nota3] [double](2),
-[nota4] [double](2)
+CREATE TABLE [Alunos] (
+[id] [nchar] (1) NOT NULL,
+[nome] [nchar](100) NULL,
+[nota1]  [nchar](200) NULL,
+[nota2]  [nchar](200) NULL,
+[nota3] [nchar](200) NULL,
+[nota4]  [nchar](200) NULL
 )
 GO
+
 

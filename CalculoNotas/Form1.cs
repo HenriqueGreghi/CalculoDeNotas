@@ -16,7 +16,7 @@ namespace CalculoNotas
     public partial class Form1 : Form
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB.;Initial Catalog=Notas;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Notas;Integrated Security=True");
         SqlCommand cmd;
         
         public Form1()
@@ -26,8 +26,7 @@ namespace CalculoNotas
 
         double nota1, nota2, nota3, nota4;
         bool testar;
-        int id;
-        string nome;
+        
 
         private void salvarNotas_Click(object sender, EventArgs e)
         {
@@ -163,5 +162,6 @@ namespace CalculoNotas
         {
 
         }
+
     }
 }
