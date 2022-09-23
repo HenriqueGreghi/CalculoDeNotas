@@ -53,47 +53,56 @@ namespace CalculoNotas
             this.resultadoMenor = new System.Windows.Forms.Label();
             this.resultadoMaior = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txt_Id = new System.Windows.Forms.TextBox();
             this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             lblNome = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.Location = new System.Drawing.Point(206, 26);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new System.Drawing.Size(49, 20);
+            lblNome.TabIndex = 28;
+            lblNome.Text = "Nome";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 101);
+            this.label1.Location = new System.Drawing.Point(12, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Nota 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 156);
+            this.label2.Location = new System.Drawing.Point(12, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nota 2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 208);
+            this.label3.Location = new System.Drawing.Point(12, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Nota 3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 263);
+            this.label4.Location = new System.Drawing.Point(12, 265);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Nota 4";
             // 
@@ -101,33 +110,34 @@ namespace CalculoNotas
             // 
             this.txt_Nota1.Location = new System.Drawing.Point(87, 95);
             this.txt_Nota1.Name = "txt_Nota1";
-            this.txt_Nota1.Size = new System.Drawing.Size(100, 26);
+            this.txt_Nota1.Size = new System.Drawing.Size(100, 28);
             this.txt_Nota1.TabIndex = 1;
             // 
             // txt_Nota2
             // 
             this.txt_Nota2.Location = new System.Drawing.Point(87, 153);
             this.txt_Nota2.Name = "txt_Nota2";
-            this.txt_Nota2.Size = new System.Drawing.Size(100, 26);
+            this.txt_Nota2.Size = new System.Drawing.Size(100, 28);
             this.txt_Nota2.TabIndex = 2;
             // 
             // txt_Nota3
             // 
             this.txt_Nota3.Location = new System.Drawing.Point(87, 208);
             this.txt_Nota3.Name = "txt_Nota3";
-            this.txt_Nota3.Size = new System.Drawing.Size(100, 26);
+            this.txt_Nota3.Size = new System.Drawing.Size(100, 28);
             this.txt_Nota3.TabIndex = 3;
             // 
             // txt_Nota4
             // 
             this.txt_Nota4.Location = new System.Drawing.Point(87, 262);
             this.txt_Nota4.Name = "txt_Nota4";
-            this.txt_Nota4.Size = new System.Drawing.Size(100, 26);
+            this.txt_Nota4.Size = new System.Drawing.Size(100, 28);
             this.txt_Nota4.TabIndex = 4;
             // 
             // salvarNotas
             // 
-            this.salvarNotas.Location = new System.Drawing.Point(60, 291);
+            this.salvarNotas.ForeColor = System.Drawing.Color.Black;
+            this.salvarNotas.Location = new System.Drawing.Point(49, 315);
             this.salvarNotas.Name = "salvarNotas";
             this.salvarNotas.Size = new System.Drawing.Size(108, 35);
             this.salvarNotas.TabIndex = 5;
@@ -137,7 +147,8 @@ namespace CalculoNotas
             // 
             // lerNotas
             // 
-            this.lerNotas.Location = new System.Drawing.Point(271, 291);
+            this.lerNotas.ForeColor = System.Drawing.Color.Black;
+            this.lerNotas.Location = new System.Drawing.Point(288, 315);
             this.lerNotas.Name = "lerNotas";
             this.lerNotas.Size = new System.Drawing.Size(86, 35);
             this.lerNotas.TabIndex = 6;
@@ -147,7 +158,8 @@ namespace CalculoNotas
             // 
             // calcular
             // 
-            this.calcular.Location = new System.Drawing.Point(483, 291);
+            this.calcular.ForeColor = System.Drawing.Color.Black;
+            this.calcular.Location = new System.Drawing.Point(526, 315);
             this.calcular.Name = "calcular";
             this.calcular.Size = new System.Drawing.Size(81, 35);
             this.calcular.TabIndex = 7;
@@ -157,7 +169,7 @@ namespace CalculoNotas
             // 
             // limpar
             // 
-            this.limpar.Location = new System.Drawing.Point(170, 374);
+            this.limpar.Location = new System.Drawing.Point(191, 393);
             this.limpar.Name = "limpar";
             this.limpar.Size = new System.Drawing.Size(76, 30);
             this.limpar.TabIndex = 8;
@@ -167,7 +179,7 @@ namespace CalculoNotas
             // 
             // sair
             // 
-            this.sair.Location = new System.Drawing.Point(407, 374);
+            this.sair.Location = new System.Drawing.Point(431, 393);
             this.sair.Name = "sair";
             this.sair.Size = new System.Drawing.Size(75, 30);
             this.sair.TabIndex = 9;
@@ -183,6 +195,7 @@ namespace CalculoNotas
             this.groupBox1.Controls.Add(this.resultadomedia);
             this.groupBox1.Controls.Add(this.resultadoMenor);
             this.groupBox1.Controls.Add(this.resultadoMaior);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(210, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(418, 210);
@@ -195,7 +208,7 @@ namespace CalculoNotas
             this.quantidadeMI.AutoSize = true;
             this.quantidadeMI.Location = new System.Drawing.Point(26, 168);
             this.quantidadeMI.Name = "quantidadeMI";
-            this.quantidadeMI.Size = new System.Drawing.Size(311, 20);
+            this.quantidadeMI.Size = new System.Drawing.Size(419, 20);
             this.quantidadeMI.TabIndex = 19;
             this.quantidadeMI.Text = "Quantidade de notas maiores ou iguais a 7";
             // 
@@ -204,7 +217,7 @@ namespace CalculoNotas
             this.somaImpar.AutoSize = true;
             this.somaImpar.Location = new System.Drawing.Point(26, 139);
             this.somaImpar.Name = "somaImpar";
-            this.somaImpar.Size = new System.Drawing.Size(185, 20);
+            this.somaImpar.Size = new System.Drawing.Size(229, 20);
             this.somaImpar.TabIndex = 18;
             this.somaImpar.Text = "Soma das notas ímpares";
             // 
@@ -213,7 +226,7 @@ namespace CalculoNotas
             this.somaPar.AutoSize = true;
             this.somaPar.Location = new System.Drawing.Point(26, 110);
             this.somaPar.Name = "somaPar";
-            this.somaPar.Size = new System.Drawing.Size(169, 20);
+            this.somaPar.Size = new System.Drawing.Size(209, 20);
             this.somaPar.TabIndex = 17;
             this.somaPar.Text = "Soma das notas pares";
             // 
@@ -222,7 +235,7 @@ namespace CalculoNotas
             this.resultadomedia.AutoSize = true;
             this.resultadomedia.Location = new System.Drawing.Point(26, 81);
             this.resultadomedia.Name = "resultadomedia";
-            this.resultadomedia.Size = new System.Drawing.Size(126, 20);
+            this.resultadomedia.Size = new System.Drawing.Size(159, 20);
             this.resultadomedia.TabIndex = 16;
             this.resultadomedia.Text = "Média das notas";
             // 
@@ -231,7 +244,7 @@ namespace CalculoNotas
             this.resultadoMenor.AutoSize = true;
             this.resultadoMenor.Location = new System.Drawing.Point(26, 52);
             this.resultadoMenor.Name = "resultadoMenor";
-            this.resultadoMenor.Size = new System.Drawing.Size(90, 20);
+            this.resultadoMenor.Size = new System.Drawing.Size(109, 20);
             this.resultadoMenor.TabIndex = 15;
             this.resultadoMenor.Text = "Menor nota";
             // 
@@ -240,12 +253,13 @@ namespace CalculoNotas
             this.resultadoMaior.AutoSize = true;
             this.resultadoMaior.Location = new System.Drawing.Point(26, 26);
             this.resultadoMaior.Name = "resultadoMaior";
-            this.resultadoMaior.Size = new System.Drawing.Size(84, 20);
+            this.resultadoMaior.Size = new System.Drawing.Size(109, 20);
             this.resultadoMaior.TabIndex = 14;
             this.resultadoMaior.Text = "Maior nota";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Maroon;
             this.groupBox2.Controls.Add(this.txt_Nome);
             this.groupBox2.Controls.Add(this.txt_Id);
             this.groupBox2.Controls.Add(lblNome);
@@ -262,53 +276,48 @@ namespace CalculoNotas
             this.groupBox2.Controls.Add(this.txt_Nota4);
             this.groupBox2.Controls.Add(this.txt_Nota2);
             this.groupBox2.Controls.Add(this.txt_Nota3);
+            this.groupBox2.Font = new System.Drawing.Font("IBM Plex Mono Text", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(634, 341);
+            this.groupBox2.Size = new System.Drawing.Size(671, 356);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Notas";
+            // 
+            // txt_Nome
+            // 
+            this.txt_Nome.Location = new System.Drawing.Point(263, 23);
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.Size = new System.Drawing.Size(323, 28);
+            this.txt_Nome.TabIndex = 30;
+            // 
+            // txt_Id
+            // 
+            this.txt_Id.Location = new System.Drawing.Point(87, 23);
+            this.txt_Id.Name = "txt_Id";
+            this.txt_Id.Size = new System.Drawing.Size(100, 28);
+            this.txt_Id.TabIndex = 29;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(29, 26);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(23, 20);
+            this.lblId.Size = new System.Drawing.Size(29, 20);
             this.lblId.TabIndex = 27;
             this.lblId.Text = "Id";
-            // 
-            // lblNome
-            // 
-            lblNome.AutoSize = true;
-            lblNome.Location = new System.Drawing.Point(206, 26);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new System.Drawing.Size(51, 20);
-            lblNome.TabIndex = 28;
-            lblNome.Text = "Nome";
-            // 
-            // txt_Id
-            // 
-            this.txt_Id.Location = new System.Drawing.Point(87, 23);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(100, 26);
-            this.txt_Id.TabIndex = 29;
-            // 
-            // txt_Nome
-            // 
-            this.txt_Nome.Location = new System.Drawing.Point(263, 23);
-            this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(323, 26);
-            this.txt_Nome.TabIndex = 30;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(695, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.limpar);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.Text = "Calcula Notas ";
             this.groupBox1.ResumeLayout(false);
